@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" type="text/css" href="tooltipster-master/dist/css/tooltipster.bundle.min.css" />
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script type="text/javascript" src="tooltipster-master/dist/js/tooltipster.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.tooltip').tooltipster({
+                theme: 'tooltipster-noir',
+                contentCloning: true
+            });
+        });
+    </script>
+</head>
+<body>
+
+<img src="../img/one.jpg" class="tooltip" title="This is my image's tooltip message!" />
+
+<span class="tooltip" title="This is my span's tooltip message!">Some text</span>
+</body>
+</html>

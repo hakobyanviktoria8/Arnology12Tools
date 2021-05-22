@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Accordion - Default functionality</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+
+    <!--tooltiopster-->
+    <link rel="stylesheet" type="text/css" href="tooltipster-master/dist/css/tooltipster.bundle.min.css"/>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script type="text/javascript" src="tooltipster-master/dist/js/tooltipster.bundle.min.js"></script>
+
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/js/jquery.tooltipster.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/tooltipster/3.3.0/css/tooltipster.min.css"/>
+
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script><style    type="text/css"></style>
+
+<!--less-->
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
+
+
+    <!--jQuery UI-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        #draggable { width: 150px; height: 150px; padding: 0.5em; }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#draggable" ).draggable();
+        } );
+    </script>
+
+    <script type="text/javascript">
+        window.onload=function(){
+            // d3.select("body").append("p").text("New paragraph))))))))))))))))))))))))))))))))00000000000000000000000000000000000000000000000000000000000000000000000000000000!");
+            /*//d3 library
+            // var paragraphs = document.getElementsByTagName("p");
+            // for (var i = 0; i < paragraphs.length; i++) {
+            //     var paragraph = paragraphs.item(i);
+            //     paragraph.style.setProperty("color", "blue", null);
+            // }*/
+            // d3.selectAll("p").style("color", function(d, i) {
+            //     return i % 2 ? "#000" : "red";
+            // });
+            //
+            // d3.selectAll("p")
+            //     .data([4, 8, 15, 16, 23, 42])
+            //     .style("font-size", function(d) { return d + "px"; });
+
+
+            // d3.select("body")
+            //     .selectAll("p")
+            //     .data([4, 8, 15, 16, 23, 42])
+            //     .enter().append("p")
+            //     .text(function(d) { return "I’m number 999999999999999999999999999999999" + d + "!"; });
+            //
+
+            /*// Update…
+            var p = d3.select("body")
+                .selectAll("p")
+                .data([4, 8, 15, 16, 23, 42])
+                .text(function(d) { return d; });
+
+// Enter…
+            p.enter().append("p")
+                .text(function(d) { return d; });
+
+// Exit…
+            p.exit().remove();*/
+
+
+            // d3.select("body").transition()
+            //     .style("background-color", "black");
+            //
+            // d3.selectAll("circle").transition()
+            //     .duration(750)
+            //     .delay(function(d, i) { return i * 10; })
+            //     .attr("r", function(d) { return Math.sqrt(d * scale); });
+
+            // // d3.select("body").style("background-color", "black");
+            // d3.selectAll("p").style("color", function() {
+            //     return "hsl(" + Math.random() * 360 + ",100%,50%)";
+            // });
+            // d3.select("body")
+            //     .selectAll("p")
+            //     .data([4, 8, 15, 16, 23, 42])
+            //     .enter().append("p")
+            //     .text(function(d) { return "I’m number " + d + "!"; });
+        };
+        $(document).ready(function () {
+            $('.tooltip').tooltipster({
+                // theme: 'tooltipster-noir',
+                contentCloning: true,
+                // animation: 'fade',
+                // delay: 200,
+                // theme: 'tooltipster-punk',
+                // trigger: 'click'
+            });
+
+            $(function () {
+                $("#accordion").accordion();
+            });
+
+
+        });
+
+    </script>
+</head>
+<style>
+    /* This is how you would create a custom secondary theme on top of tooltipster-noir: */
+
+    .tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-box {
+        background: grey;
+        border: 3px solid red;
+        border-radius: 6px;
+        box-shadow: 5px 5px 2px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .tooltipster-sidetip.tooltipster-noir.tooltipster-noir-customized .tooltipster-content {
+        color: blue;
+        padding: 8px;
+    }
+
+
+</style>
+<body>
+
+<div id="draggable" class="ui-widget-content">
+    <p>Drag me around</p>
+    <img src="img/two.jpg" width="100"/>
+</div>
+
+<hr>
+<div id="page">
+    <h2 id="header1">
+        Kikikkiih
+    </h2>
+</div>
+<h1 class="class">Hello</h1>
+<div class="div">1</div>
+<p id="header">
+    <a href="#">Link</a><br>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus error facere iste modi nesciunt quaerat quas reiciendis similique tempora temporibus. Est quae quas vitae. Beatae corporis error fugiat libero voluptatem?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus error facere iste modi nesciunt quaerat quas reiciendis similique tempora temporibus. Est quae quas vitae. Beatae corporis error fugiat libero voluptatem?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus error facere iste modi nesciunt quaerat quas reiciendis similique tempora temporibus. Est quae quas vitae. Beatae corporis error fugiat libero voluptatem?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus error facere iste modi nesciunt quaerat quas reiciendis similique tempora temporibus. Est quae quas vitae. Beatae corporis error fugiat libero voluptatem?</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus error facere iste modi nesciunt quaerat quas reiciendis similique tempora temporibus. Est quae quas vitae. Beatae corporis error fugiat libero voluptatem?</p>
+<span class="tooltip"
+      data-tooltip-content="#tooltip_content">This span has a tooltip with HTML when you hover over it!</span>
+
+<div class="tooltip_templates">
+    <span id="tooltip_content">
+        <img src="img/two.jpg"/> <strong>This is the content of my tooltip!</strong>
+    </span>
+</div>
+
+<div>
+    <img src="img/one.jpg" class="tooltip" title="This is my image's tooltip message!"/>
+</div>
+<br>
+<span class="tooltip" title="This is my span's tooltip message!">Some text</span>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="accordion">
+    <h3>Section 1</h3>
+    <div>
+        <p>
+            Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+            ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+            amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+            odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+        </p>
+    </div>
+    <h3>Section 2</h3>
+    <div>
+        <p>
+            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+            suscipit faucibus urna.
+        </p>
+    </div>
+    <h3>Section 3</h3>
+    <div>
+        <p>
+            Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+            Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+            ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+            lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+        </p>
+        <ul>
+            <li>List item one</li>
+            <li>List item two</li>
+            <li>List item three</li>
+        </ul>
+    </div>
+    <h3>Section 4</h3>
+    <div>
+        <p>
+            Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+            et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+            faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+            mauris vel est.
+        </p>
+        <p>
+            Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+            inceptos himenaeos.
+        </p>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>

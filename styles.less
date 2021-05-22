@@ -1,0 +1,68 @@
+@width: 20px;
+@height: @width + 10px;
+
+p {
+  border: @width/10 solid gray;
+}
+.p{
+  color: red;
+}
+#header {
+  font-size: @width;
+  padding: @height;
+  a{
+    font-size: @height;
+    .p();
+  }
+}
+
+@var: 50vh/2;
+
+.div{
+  width: calc(50% + (@var - 20vh));
+  height: @height;
+  background: #f71169;
+}
+
+//function
+@base: red;
+@width: 0.5;
+
+.class {
+  width: percentage(@width); // returns `50%`
+  color: saturate(@base, 50%);
+  background-color: spin(lighten(@base, 25%), 8);
+}
+
+@var: #1dff13;
+
+#page {
+  @var: white;
+  background: #f71169;
+  #header1 {
+    color: @var; // white
+  }
+
+
+}
+#page:hover{
+  background: @var;
+  .p()!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
